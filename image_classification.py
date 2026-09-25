@@ -1,4 +1,5 @@
 import os
+import pickle
 
 from skimage.io import imread
 from skimage.transform import resize
@@ -51,3 +52,4 @@ score = accuracy_score(y_prediction, y_test)
 print(f'{score * 100}% of samples were correctly classified')
 print(f'Best parameters: {grid_search.best_params_}')
 
+pickle.dump(best_estimator, open('model.pkl', 'wb'))
