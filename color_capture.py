@@ -7,7 +7,8 @@ from color_helper import get_limits
 title = "Select an color that you want to detect: "
 colors = ["Yellow", "Green", "Blue", "Red"]
 
-selected_color = pick.pick(colors, title=title)[0]
+selection = pick.pick(colors, title=title)[0]
+selected_color = selection[0] if isinstance(selection, tuple) else selection
 
 color_map = {
     "Yellow": [0, 255, 255],
