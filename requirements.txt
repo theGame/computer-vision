@@ -1,6 +1,11 @@
-opencv-python == 4.6.0.66
-numpy == 2.4.6
+opencv-python == 5.0.0.93
+numpy == 2.5.3
 pick == 1.3.0
 scikit-learn == 1.9.1
 scikit-image== 0.26.0
 mediapipe == 1.0.1
+
+# text detection
+easyocr == 1.7.2
+matplotlib == 3.11.2
+opencv-python-headless == 5.0.0.93
