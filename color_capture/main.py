@@ -33,6 +33,12 @@ try:
             print("Error: Could not read frame.")
             continue
 
+        hsv_image = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
+
+        mask1 = cv.inRange(hsv_image, lower1, upper1)
+        mask2 = cv.inRange(hsv_image, lower2, upper2)
+
+        mask = cv.bitwise_or(mask1, mask2)
 
         contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
         if contours and len(contours) > 0:
