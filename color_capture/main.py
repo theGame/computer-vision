@@ -57,6 +57,3 @@ finally:
     cv.destroyAllWindows()
 
 
-
-    
-
