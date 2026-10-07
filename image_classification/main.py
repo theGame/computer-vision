@@ -15,7 +15,7 @@ from sklearn.metrics import accuracy_score
 
 directory = os.path.dirname(os.path.abspath(__file__))
 input_directory = os.path.join(directory, 'images/')
-categories = [ 'empty', 'not_empty' ]
+categories = ['empty', 'not_empty']
 
 data = []
 labels = []
@@ -39,7 +39,7 @@ labels = np.asarray(labels)
 x_train, x_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, random_state=42, stratify=labels)
 
 # train classifier
-param_grid = [ { 'gamma': [0.01, 0.001, 0.0001], 'C': [1, 10, 100, 1000] } ]
+param_grid = [{'gamma': [0.01, 0.001, 0.0001], 'C': [1, 10, 100, 1000]}]
 
 grid_search = GridSearchCV(SVC(), param_grid, cv=5, scoring='accuracy', n_jobs=-1)
 

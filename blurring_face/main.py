@@ -45,8 +45,7 @@ with FaceDetector.create_from_options(options) as detector:
 
             if w <= 0 or h <= 0:
                 continue
-            
-            #blur face
+            # Blur face
             face_region = img[y:y+h, x:x+w]
             blurred_face = cv2.GaussianBlur(face_region, (99, 99), 30)
             img[y:y+h, x:x+w] = blurred_face
