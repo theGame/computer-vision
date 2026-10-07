@@ -25,7 +25,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: cache pip dependencies
+    - name: Cache pip dependencies
       uses: actions/cache@v6
       with:
         path: ~/.cache/pip
