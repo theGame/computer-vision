@@ -23,7 +23,7 @@ for text in texts:
     bbox, text, confidence = text
 
     # if the confidence is greater than the threshold, draw the bbox and text
-    if confidence > threshold: 
+    if confidence > threshold:
         cv2.rectangle(img, bbox[0], bbox[2], (0, 255, 0), 2)
         cv2.putText(img, text, bbox[0], cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 0, 0), 2)
 
