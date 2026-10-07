@@ -40,6 +40,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Lint with flake8
+      id: flake8
       continue-on-error: true
       run: |
         # Stop the build if there are Python syntax errors or undefined names.
