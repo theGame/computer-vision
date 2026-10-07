@@ -1,0 +1,2 @@
+0 dollar
+1 euro
