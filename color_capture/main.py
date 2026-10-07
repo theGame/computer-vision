@@ -55,5 +55,3 @@ finally:
     print("Releasing resources...")
     cap.release()
     cv.destroyAllWindows()
-
-
