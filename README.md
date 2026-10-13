@@ -29,6 +29,10 @@ tensor_flow/
     labels.txt
     main.py
     README.md
+yolov/
+    main.py
+    model/yolov8n.pt
+    videos/test.mp4
 utils/
     color_helper.py
 requirements.txt
@@ -146,6 +150,16 @@ To disable oneDNN custom operations temporarily, run:
 $env:TF_ENABLE_ONEDNN_OPTS = "0"
 python -m tensor_flow.main
 ```
+
+### YOLOv8 detection and tracking
+
+Run the YOLOv8 object-detection demo against the bundled video:
+
+```powershell
+python -m yolov.main
+```
+
+The script loads `yolov/model/yolov8n.pt` and processes `yolov/videos/test.mp4`, drawing detection results in a window. Press `q` to close the video window.
 
 ## Notes for newcomers
 
