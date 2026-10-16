@@ -3,7 +3,7 @@ numpy == 2.5.3
 pick == 1.3.0
 scikit-learn == 1.9.1
 scikit-image== 0.26.0
-mediapipe == 1.0.1
+mediapipe == 1.0.1 # 1.1.0 already released
 
 # text detection
 easyocr == 1.7.2
