@@ -1,7 +1,7 @@
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
 import tensorflow as tf
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 x = tf.constant([1, 2, 3])
 
@@ -20,8 +20,8 @@ a = tf.constant(5)
 b = tf.constant([1, 2, 3, 4, 5, 6])
 # two-dimensional tensor
 c = tf.constant([
-    [1,2,3],
-    [4,5,6]
+    [1, 2, 3], 
+    [4, 5, 6]
 ])
 
 print(a.shape)  # ()
@@ -31,6 +31,4 @@ print(c.shape)  # (2, 3)
 # changing the shape with tf.reshape
 d = tf.reshape(b, (3, 2))
 print(d.shape)  # (3, 2)
-print(d)  # [[1 2]
-            #  [3 4]
-            #  [5 6]]
+print(d) # [[1 2] [3 4] [5 6]]

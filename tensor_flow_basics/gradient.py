@@ -1,8 +1,8 @@
 
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
 import tensorflow as tf
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 # A trainable parameter
 w = tf.Variable(1.0)

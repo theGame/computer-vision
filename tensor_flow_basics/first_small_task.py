@@ -1,9 +1,9 @@
 
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
 import tensorflow as tf
 import keras
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 print("TensorFlow:", tf.__version__)
 print("Keras:", keras.__version__)
@@ -11,17 +11,17 @@ print("Sequential in tf.keras:", hasattr(tf.keras, "Sequential"))
 print("Sequential in keras:", hasattr(keras, "Sequential"))
 
 # First machine learning example
-# There are many house for sale in the city. The price of the house depends on the size of the house. 
-# We have a dataset with the size of the house and the price of the house. 
+# There are many house for sale in the city. The price of the house depends on the size of the house.
+# We have a dataset with the size of the house and the price of the house.
 # We will use this dataset to train a model to predict the price of the house based on the size of the house.
 # house_sizes = [30, 50, 70, 90]
 # house_prices = [60, 100, 140, 180]
 # formula: y = mx + b
-# where y is the price of the house, x is the size of the house, 
+# where y is the price of the house, x is the size of the house,
 # m - weight, controlling how strongly the input affects the result
 # b - bias, controlling the output when the input is zero
 
-# Input examples, house sizes: 
+# Input examples, house sizes:
 x = tf.constant([30, 50, 70, 90], dtype=tf.float32)
 
 # Output examples, house prices:
