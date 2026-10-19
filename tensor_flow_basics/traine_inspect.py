@@ -11,7 +11,7 @@ y = tf.constant([[60.0], [100.0], [140.0], [180.0]], dtype=tf.float32)
 x_scaled = x / 100.0
 y_scaled = y / 200.0
 
-# create a model 
+# create a model
 model = tf.keras.Sequential([
     tf.keras.layers.Input(shape=(1,)),  # Input layer with one input
     tf.keras.layers.Dense(1)  # Output layer with one output
@@ -23,7 +23,7 @@ model.compile(optimizer=tf.keras.optimizers.SGD(learning_rate=0.1), loss='mean_s
 # train the model
 history = model.fit(x_scaled, y_scaled, epochs=300, verbose=0)
 
-# inspect the learning params 
+# inspect the learning params
 weights, biases = model.layers[0].get_weights()
 
 print("Weights:", weights[0, 0])
