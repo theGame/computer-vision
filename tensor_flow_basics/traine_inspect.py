@@ -38,3 +38,4 @@ print("Predicted price for a 60 square meter house:", prediction)
 
 # inspect the final loss
 print("Final loss:", history.history['loss'][-1])
+
