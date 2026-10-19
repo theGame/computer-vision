@@ -31,4 +31,3 @@ predictions = model.predict(test_values, verbose=0)
 
 for x_value, prediction in zip(test_values, predictions):
     print(f"x={x_value[0]:.1f}, predicted y={prediction[0]:.3f}")
-
