@@ -20,7 +20,7 @@ a = tf.constant(5)
 b = tf.constant([1, 2, 3, 4, 5, 6])
 # two-dimensional tensor
 c = tf.constant([
-    [1, 2, 3], 
+    [1, 2, 3],
     [4, 5, 6]
 ])
 
@@ -31,4 +31,4 @@ print(c.shape)  # (2, 3)
 # changing the shape with tf.reshape
 d = tf.reshape(b, (3, 2))
 print(d.shape)  # (3, 2)
-print(d) # [[1 2] [3 4] [5 6]]
+print(d)  # [[1 2] [3 4] [5 6]]
