@@ -17,3 +17,7 @@ tensorflow
 
 # for yolo project
 ultralytics == 8.4.176
+
+# for openai project
+openai == 3.42.0
+python-dotenv == 1.2.4
