@@ -18,7 +18,7 @@ contours, _ = cv.findContours(binary_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SI
 
 # Draw bounding boxes around the contours on the original image
 bounding_box_image = image.copy()   
-for index, contour in enumerate(contours):
+for index, contour in enumerate(contours):    
     if cv.contourArea(contour) < 200:  # Filter out small contours
         continue
     x, y, w, h = cv.boundingRect(contour)
